@@ -6,7 +6,6 @@
   ],
   "packageRules": [
     {
-      "semanticCommitType": "fnord",
       "additionalBranchPrefix": "{{baseDir}}-",
       "matchPackagePatterns": [".*"]
     }
