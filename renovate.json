@@ -1,13 +1,15 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base",":rebaseStalePrs",
+    "config:base", ":rebaseStalePrs", ":separatePatchReleases", ":dependencyDashboard",
+    ":semanticCommitType(fnord)",
+    ":semanticCommitScope({{baseDir}})",
     ":semanticCommits"
   ],
   "packageRules": [
     {
       "additionalBranchPrefix": "{{baseDir}}-",
-      "matchPackagePatterns": [".*"],
-      "semanticCommitScope": "{{baseDir}}"
+      "matchPackagePatterns": [".*"]
     }
   ]
 }
