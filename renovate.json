@@ -1,13 +1,13 @@
 {
   "extends": [
     "config:base",":rebaseStalePrs",
-    ":semanticCommitScope({{baseDir}})",
     ":semanticCommits"
   ],
   "packageRules": [
     {
       "additionalBranchPrefix": "{{baseDir}}-",
-      "matchPackagePatterns": [".*"]
+      "matchPackagePatterns": [".*"],
+      "semanticCommitScope": "{{baseDir}}"
     }
   ]
 }
