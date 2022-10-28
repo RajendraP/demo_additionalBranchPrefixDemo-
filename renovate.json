@@ -1,12 +1,12 @@
 {
   "extends": [
     "config:base",":rebaseStalePrs",
-    ":semanticCommitType(fnord)",
     ":semanticCommitScope({{baseDir}})",
     ":semanticCommits"
   ],
   "packageRules": [
     {
+      ":semanticCommitType(fnord)",
       "additionalBranchPrefix": "{{baseDir}}-",
       "matchPackagePatterns": [".*"]
     }
